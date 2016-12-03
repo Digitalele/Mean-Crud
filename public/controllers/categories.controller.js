@@ -5,5 +5,3 @@ angular.module("crud")
 		$scope.categories = data;
 	});
 }]);
-
-

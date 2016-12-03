@@ -1,1 +1,21 @@
-edit
+<div ng-controller = "ArticleEditCtrl">
+<h3>Modifica articolo</h3>
+<form ng-submit="updateArticle()">
+  <div class="form-group">
+    <label>Titolo articolo</label>
+    <input type="text" class="form-control" ng-model="article.title" name="title" placeholder="Enter Title">
+  </div>
+  <div class="form-group">
+    <label>Categoria</label>
+   <select class="form-control" ng-model="article.category" name="category">
+   	<option ng-repeat="category in categories" value="{{category.name}}">{{category.name}}</option>
+   </select>
+  </div>
+  <div class="form-group">
+    <label>Corpo</label>
+    <textarea class="form-control" ng-model="body" name="article.body" placeholder="Enter Article Body"></textarea>
+  </div>
+ 
+  <button type="submit" class="btn btn-default">Invia</button>
+  <a class="btn btn-danger" href="/#categories">Cancella</a>
+</div>
